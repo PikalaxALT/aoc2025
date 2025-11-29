@@ -1,0 +1,12 @@
+# C++
+build-cmake-*
+.vscode
+.cache
+compile_commands.json
+data
+
+# Python
+__pycache__
+
+# Misc
+.DS_Store

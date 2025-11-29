@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.30)
+project(AOC2025 CXX)
+
+string(TIMESTAMP DAY %d)
+string(TIMESTAMP YEAR %Y)
+
+find_package(Boost REQUIRED COMPONENTS log)
+
+set(CMAKE_CXX_STANDARD 23)
+# Temporary until clang adds support for modules
+if(CMAKE_CXX_COMPILER_ID STREQUAL GNU)
+    set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
+endif()
+if(${MONTH} NOT EQUAL 12)
+    set(DAY 0)
+elseif(${YEAR} GREATER 2025 OR ${DAY} GREATER 11)
+    set(DAY 11)
+endif()
+foreach(i RANGE 1 ${DAY})
+    if(IS_READABLE ${CMAKE_CURRENT_SOURCE_DIR}/src/aoc2025_${i}.cpp)
+        add_executable(aoc2025_${i} src/aoc2025_${i}.cpp)
+        target_include_directories(aoc2025_${i} PRIVATE include)
+        target_compile_definitions(aoc2025_${i} PRIVATE AOC2025_DAY=${i})
+        target_link_libraries(aoc2025_${i} PUBLIC Boost::log)
+    endif()
+endforeach()

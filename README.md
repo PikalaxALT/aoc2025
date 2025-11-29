@@ -1,0 +1,27 @@
+# Advent of Code 2025
+
+This repository contains my code solutions for Advent of Code 2025.
+
+## System requirements
+
+cmake 3.30 or later
+C++ compilers and standard libraries supporting C++23 features
+Boost 1.82.0 or later
+
+## To compile
+
+```
+mkdir -p build
+cmake . -B build
+cmake --build build
+```
+
+## Set up data
+
+Copy the examples from [the server](https://adventofcode.com/2025) in `data/examples`. Identify each file simply by the day number eg. `1.txt`.
+
+Save your test cases from [the server](https://adventofcode.com/2025) in `data/testcases`. Identify each file simply by the day number eg. `1.txt`.
+
+## To run
+
+Simply run the executable for the desired day eg. `build/aoc2025_1` for the day 1 executable.

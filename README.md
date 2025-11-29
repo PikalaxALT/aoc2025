@@ -4,9 +4,9 @@ This repository contains my code solutions for Advent of Code 2025.
 
 ## System requirements
 
-cmake 3.30 or later
-C++ compilers and standard libraries supporting C++23 features
-Boost 1.82.0 or later
+- cmake 3.30 or later
+- C++ compilers and standard libraries supporting C++23 features
+- Boost 1.82.0 or later
 
 ## To compile
 

@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-for i in {1..11}; do
+for i in {1..12}; do
     if ! [ -f src/aoc2025_${i}.cpp ]; then
         cat <<-EOF > src/aoc2025_${i}.cpp
 #include "aoc2025.hpp"
